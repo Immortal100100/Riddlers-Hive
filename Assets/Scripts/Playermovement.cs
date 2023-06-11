@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Playermovement : MonoBehaviour
 {
-    public Transform transform;
     Vector3 m_movement;
+    public float Playerspeed = 0.05f;
+
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis ("Vertical");
-        m_movement.Set(0.1f*horizontal,0.1f*vertical,0f);
+        float horizontal = Playerspeed*Input.GetAxis("Horizontal");
+        float vertical = Playerspeed*Input.GetAxis ("Vertical");
+        m_movement.Set(horizontal,vertical,0f);
         transform.position = transform.position + m_movement;
     }
 }
