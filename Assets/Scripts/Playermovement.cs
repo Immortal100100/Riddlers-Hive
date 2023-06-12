@@ -10,9 +10,12 @@ public class Playermovement : MonoBehaviour
 
     void Update()
     {
-        float horizontal = Playerspeed*Input.GetAxis("Horizontal");
-        float vertical = Playerspeed*Input.GetAxis ("Vertical");
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis ("Vertical");
         m_movement.Set(horizontal,vertical,0f);
+        m_movement.Normalize();
+        m_movement.x*= Playerspeed;
+        m_movement.y*= Playerspeed;
         transform.position = transform.position + m_movement;
         if(horizontal!=0f || vertical!=0f){
             animator.SetBool("Walking",true);
