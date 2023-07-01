@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TaskComplete : MonoBehaviour
 {
+    public GameObject gameobject;
     public Task task;
 
     // Update is called once per frame
@@ -16,5 +17,6 @@ public class TaskComplete : MonoBehaviour
 
     public void ButtonPressed(){
         task.x = true;
+        gameobject.SetActive(false);
     }
 }
