@@ -6,6 +6,7 @@ public class TaskComplete : MonoBehaviour
 {
     public GameObject gameobject;
     public Task task;
+    public GameObject button;
 
     // Update is called once per frame
     void Update()
@@ -18,5 +19,6 @@ public class TaskComplete : MonoBehaviour
     public void ButtonPressed(){
         task.x = true;
         gameobject.SetActive(false);
+        button.SetActive(false);
     }
 }
