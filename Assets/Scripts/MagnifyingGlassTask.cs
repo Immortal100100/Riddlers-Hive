@@ -6,7 +6,6 @@ public class MagnifyingGlassTask : MonoBehaviour
 {
     public GameObject gameobject;
     public Task task;
-    public GameObject button;
     Quaternion Rotate0 = Quaternion.Euler(0,0,90);
     Quaternion Rotate1 = Quaternion.Euler(0,0,0);
 

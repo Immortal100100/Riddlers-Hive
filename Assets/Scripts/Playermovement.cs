@@ -27,7 +27,7 @@ public class Playermovement : MonoBehaviour
         if(horizontal>0f){
             sr.flipX=true;
         }
-        else{
+        else if(horizontal<0f){
             sr.flipX=false;
         }
 
