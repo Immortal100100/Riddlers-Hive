@@ -7,6 +7,7 @@ public class Playermovement : MonoBehaviour
     Vector3 m_movement;
     public float Playerspeed = 0.05f;
     public Animator animator;
+    public SpriteRenderer sr;
 
     void Update()
     {
@@ -22,6 +23,12 @@ public class Playermovement : MonoBehaviour
         }
         else{
             animator.SetBool("Walking",false);
+        }
+        if(horizontal>0f){
+            sr.flipX=true;
+        }
+        else{
+            sr.flipX=false;
         }
 
     }

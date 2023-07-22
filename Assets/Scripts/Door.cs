@@ -6,6 +6,7 @@ public class Door : MonoBehaviour
 {
     public GameObject Player;
     public GameObject button;
+    public GameObject Label;
     public Task[] TaskedObjects;
     bool check = true;
     // Start is called before the first frame update
@@ -20,6 +21,15 @@ public class Door : MonoBehaviour
             if(check){
                 button.SetActive(true);
             }
+            else{
+                Label.SetActive(true);
+            }
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other){
+        if(other.gameObject == Player){
+            Label.SetActive(false);
         }
     }
     

@@ -8,7 +8,7 @@ public class Doorbutton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(Input.GetKey("space") || Input.GetKey("enter")){
+       if(Input.GetAxis("Submit")>0){
         doorUnlocked();
        } 
     }
