@@ -30,6 +30,8 @@ public class Door : MonoBehaviour
     void OnCollisionExit2D(Collision2D other){
         if(other.gameObject == Player){
             Label.SetActive(false);
+            check = true;
+            button.SetActive(false);
         }
     }
     

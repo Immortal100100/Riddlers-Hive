@@ -8,6 +8,7 @@ public class Playermovement : MonoBehaviour
     public float Playerspeed = 0.05f;
     public Animator animator;
     public SpriteRenderer sr;
+    public BoxCollider2D collider;
 
     void Update()
     {
@@ -26,9 +27,11 @@ public class Playermovement : MonoBehaviour
         }
         if(horizontal>0f){
             sr.flipX=true;
+            collider.offset = new Vector2(0.7056732f,-0.1442976f);
         }
         else if(horizontal<0f){
             sr.flipX=false;
+            collider.offset = new Vector2(-0.7056732f,-0.1442976f);
         }
 
     }

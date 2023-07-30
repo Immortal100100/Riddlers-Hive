@@ -2,28 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Candle : MonoBehaviour
+public class Fanon : MonoBehaviour
 {
-    public ShowButton Show;
+    public GameObject gameobject;
     public Task task;
     public GameObject button;
-    public Task Lighter;
-    public Animator animator;
+    public GameObject Offbutton;
+    public ShowButton showingbutton;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey("l")){
+        if(Input.GetKey("p")){
             ButtonPressed();
+        }
+        if(!showingbutton.collided){
+            button.SetActive(false);
         }
     }
 
     public void ButtonPressed(){
-        if(Lighter.x == true){
-        task.x = true;
-        animator.SetBool("Lit",true);
-        Show.enabled = false;
+        task.x = false;
+        Offbutton.SetActive(true);
         button.SetActive(false);
-        }
     }
 }

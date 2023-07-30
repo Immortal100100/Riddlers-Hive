@@ -15,7 +15,6 @@ public class ShowButton : MonoBehaviour
 
     private void Update()
     {
-        if(!task.x){
         if (collided == true)
         {
             button.SetActive(true);
@@ -23,7 +22,6 @@ public class ShowButton : MonoBehaviour
         else
         {
             button.SetActive(false);
-        }
         }
     }
 
